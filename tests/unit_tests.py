@@ -43,11 +43,11 @@ def test_fibonacci_negative():
 
 # 3. Test count_vowels
 @pytest.mark.parametrize("text,expected", [
-    ("Python", 1),
+    ("Python", 2),
     ("AEIOUY", 6),
     ("bcd", 0),
     ("", 0),
-    ("Próba żółwia", 4),
+    ("Próba żółwia", 5),
 ])
 def test_count_vowels(text, expected):
     assert count_vowels(text) == expected
@@ -101,4 +101,5 @@ def test_word_frequencies(text, expected):
     (97, True),
 ])
 def test_is_prime(n, expected):
+
     assert is_prime(n) == expected
